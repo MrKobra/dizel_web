@@ -204,4 +204,30 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
 }
 
+.advantages {
+  background: url(../img/adv-bg.png) no-repeat center center;
+  background-size: cover;
+  padding: 100px 0;
+}
+.advantages-container {
+  display: flex;
+  column-gap: 50px;
+  justify-content: center;
+}
+.advantages-card {
+  flex-basis: 250px;
+  text-align: center;
+}
+.advantages-card_text {
+  margin-top: 20px;
+}
+.advantages-card_text h3 {
+  font-size: 16px;
+  line-height: 21px;
+  margin: 0;
+  color: #ffffff;
+  font-weight: 600;
+  font-family: "Inter", "Montserrat", sans-serif;
+}
+
 /*# sourceMappingURL=style.css.map */
