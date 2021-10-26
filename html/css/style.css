@@ -40,6 +40,30 @@ h1, h2, h3, h4, h5, h6 {
   display: inline-block;
 }
 
+.heading {
+  padding-left: 30px;
+  position: relative;
+}
+.heading:before {
+  content: "";
+  width: 75px;
+  height: calc(100% + 1px);
+  border: 5px solid #E3AD14;
+  position: absolute;
+  top: -5px;
+  left: 0;
+}
+.heading h2 {
+  color: #2D2D2D;
+  text-transform: uppercase;
+  font-size: 36px;
+  position: relative;
+  z-index: 2;
+  background: #ffffff;
+  margin: 0;
+  padding: 27px 0;
+}
+
 .top-header {
   background: #202020;
   padding: 12px 0;
@@ -228,6 +252,56 @@ h1, h2, h3, h4, h5, h6 {
   color: #ffffff;
   font-weight: 600;
   font-family: "Inter", "Montserrat", sans-serif;
+}
+
+.items {
+  padding-top: 150px;
+}
+.items-container {
+  margin-top: 70px;
+  display: flex;
+  column-gap: 33px;
+  flex-wrap: wrap;
+  row-gap: 50px;
+}
+.items-card {
+  flex-basis: calc(33.33% - 22px);
+  border: 5px solid #E3AD14;
+  border-right: none;
+  box-sizing: border-box;
+  padding: 10px 24px 40px;
+}
+.items-card_img {
+  text-align: center;
+}
+.items-card_img img {
+  max-width: 100%;
+  height: auto;
+}
+.items-card h3 {
+  font-size: 20px;
+  color: #2D2D2D;
+  text-align: center;
+  margin: 5px 0 0;
+  text-transform: uppercase;
+}
+.items-card ul {
+  padding: 5px 0 0;
+  margin: 0;
+}
+.items-card ul li {
+  list-style: none;
+  margin-top: 10px;
+  font-size: 16px;
+  line-height: 23px;
+  color: #2D2D2D;
+}
+.items-card ul li span {
+  color: #757373;
+}
+.items-card_price {
+  margin-top: 25px;
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

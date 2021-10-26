@@ -163,3 +163,44 @@
         color: #ffffff
         font-weight: 600
         font-family: $mFont, $hFont, sans-serif
+
+// Items
+.items
+  padding-top: 150px
+  &-container
+    margin-top: 70px
+    display: flex
+    column-gap: 33px
+    flex-wrap: wrap
+    row-gap: 50px
+  &-card
+    flex-basis: calc(33.33% - 22px)
+    border: 5px solid $yellow
+    border-right: none
+    box-sizing: border-box
+    padding: 10px 24px 40px
+    &_img
+      text-align: center
+      img
+        max-width: 100%
+        height: auto
+    h3
+      font-size: 20px
+      color: $black
+      text-align: center
+      margin: 5px 0 0
+      text-transform: uppercase
+    ul
+      padding: 5px 0 0
+      margin: 0
+      li
+        list-style: none
+        margin-top: 10px
+        font-size: 16px
+        line-height: 23px
+        color: $black
+        span
+          color: $grey
+    &_price
+      margin-top: 25px
+      width: 100%

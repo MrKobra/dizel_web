@@ -26,3 +26,24 @@ h1, h2, h3, h4, h5, h6
   padding: 18px 0
   text-align: center
   display: inline-block
+
+.heading
+  padding-left: 30px
+  position: relative
+  &:before
+    content: ''
+    width: 75px
+    height: calc(100% + 1px)
+    border: 5px solid $yellow
+    position: absolute
+    top: -5px
+    left: 0
+  h2
+    color: $black
+    text-transform: uppercase
+    font-size: 36px
+    position: relative
+    z-index: 2
+    background: #ffffff
+    margin: 0
+    padding: 27px 0
