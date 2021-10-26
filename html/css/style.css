@@ -30,4 +30,71 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Montserrat", "Inter", sans-serif;
 }
 
+.top-header {
+  background: #202020;
+  padding: 12px 0;
+}
+.top-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.top-header_contact {
+  display: flex;
+  column-gap: 25px;
+}
+.top-header_contact p {
+  font-size: 14px;
+  line-height: 19px;
+  color: #ffffff;
+  margin: 0;
+}
+.top-header_contact ul {
+  margin: 0;
+  padding: 0;
+}
+.top-header_contact ul li {
+  list-style: none;
+}
+.top-header_contact ul li a {
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: 600;
+}
+.top-header_contact .request-btn {
+  margin-top: 5px;
+  color: #E3AD14;
+  text-decoration: underline;
+  font-size: 14px;
+  line-height: 19px;
+  display: block;
+  text-align: right;
+}
+.top-header_contact-phone {
+  padding-left: 27px;
+  position: relative;
+}
+.top-header_contact-phone:before {
+  content: "";
+  background: url(../img/phone.png) no-repeat center center;
+  width: 21px;
+  height: 21px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.top-header_contact-address {
+  padding-left: 24px;
+  position: relative;
+}
+.top-header_contact-address:before {
+  content: "";
+  background: url(../img/location.png) no-repeat center center;
+  width: 17px;
+  height: 21px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
 /*# sourceMappingURL=style.css.map */

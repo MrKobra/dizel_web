@@ -1,3 +1,59 @@
 @import "reset.sass"
 @import "../fonts/fonts.css"
 @import "sittings.sass"
+
+// Top header
+.top-header
+  background: $dark
+  padding: 12px 0
+  .container
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &_contact
+    display: flex
+    column-gap: 25px
+    p
+      font-size: 14px
+      line-height: 19px
+      color: #ffffff
+      margin: 0
+    ul
+      margin: 0
+      padding: 0
+      li
+        list-style: none
+        a
+          font-size: 16px
+          color: #ffffff
+          font-weight: 600
+    .request-btn
+      margin-top: 5px
+      color: $yellow
+      text-decoration: underline
+      font-size: 14px
+      line-height: 19px
+      display: block
+      text-align: right
+    &-phone
+      padding-left: 27px
+      position: relative
+      &:before 
+        content: ''
+        background: url(../img/phone.png) no-repeat center center
+        width: 21px
+        height: 21px
+        position: absolute
+        left: 0
+        top: 0
+    &-address
+      padding-left: 24px
+      position: relative
+      &:before
+        content: ''
+        background: url(../img/location.png) no-repeat center center
+        width: 17px
+        height: 21px
+        position: absolute
+        left: 0
+        top: 0
