@@ -256,3 +256,49 @@
       color: $black
       font-weight: 600
 
+// Info block
+.info-block
+  padding: 150px 0
+  &_container
+    background: url(../img/info-bg.png) no-repeat bottom left
+    margin-top: 30px
+  &_content
+    width: 610px
+    margin-left: auto
+    padding: 70px 0 40px
+    h3
+      font-family: $hFont, $mFont, sans-serif
+      color: $black
+      font-size: 20px
+      line-height: 28px
+      margin: 0
+    p
+      font-size: 16px
+      line-height: 24px
+      color: $black
+      margin: 10px 0 0
+      strong
+        font-weight: 600
+    ul
+      padding: 0
+      margin: 0
+      li
+        list-style: none
+        position: relative
+        margin-top: 20px
+        font-weight: 600
+        font-size: 16px
+        line-height: 23px
+        padding-left: 20px
+        &:before
+          content: ''
+          width: 5px
+          height: 5px
+          border-radius: 50%
+          background: $black
+          position: absolute
+          left: 0
+          top: 10px
+    .btn
+      margin-top: 20px
+      width: 350px
