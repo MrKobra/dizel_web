@@ -304,4 +304,63 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
 }
 
+.about {
+  padding-top: 200px;
+}
+.about-info {
+  background: url(../img/about-bg.png) no-repeat center right;
+  padding: 85px 0 65px;
+  margin-top: 20px;
+}
+.about-info_container {
+  padding-left: 75px;
+  width: 725px;
+  box-sizing: border-box;
+}
+.about-info h3 {
+  font-family: "Inter", "Montserrat", sans-serif;
+  font-size: 20px;
+  line-height: 28px;
+  margin: 0;
+  color: #2D2D2D;
+}
+.about-info h4 {
+  margin: 20px 0 0;
+  font-size: 16px;
+  line-height: 23px;
+  color: #2D2D2D;
+  font-family: "Inter", "Montserrat", sans-serif;
+  font-weight: 600;
+}
+.about-info ul {
+  padding: 0;
+  margin: 0;
+}
+.about-info ul li {
+  list-style: none;
+  padding-left: 20px;
+  position: relative;
+  color: #2D2D2D;
+  font-size: 16px;
+  line-height: 23px;
+  margin-top: 10px;
+}
+.about-info ul li:before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: #2D2D2D;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -5px;
+}
+.about-info p {
+  margin: 20px 0 0;
+  font-size: 16px;
+  line-height: 23px;
+  color: #2D2D2D;
+  font-weight: 600;
+}
+
 /*# sourceMappingURL=style.css.map */
