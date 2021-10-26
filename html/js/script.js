@@ -1,14 +1,17 @@
 $(document).ready(function(){
     // Стилизация checkbox
-    function checkboxActive() {
-        if($('.agree').find('input[type=checkbox]').prop('checked')) {
-            $('.agree label').addClass('active');
+    $('.agree').each(function(){
+        if($(this).find('input[type=checkbox]').prop('checked')) {
+            $(this).find('label').addClass('active');
         } else {
-            $('.agree label').removeClass('active');
+            $(this).find('label').removeClass('active');
         }
-    }
-    checkboxActive();
+    })
     $('.agree input[type=checkbox]').on('change', function(){
-        checkboxActive();
+        if($(this).prop('checked')) {
+            $(this).parent().find('label').addClass('active');
+        } else {
+            $(this).parent().find('label').removeClass('active');
+        }
     })
 })

@@ -458,3 +458,268 @@
       border: none
       font-size: 16px
       padding: 16px 0
+      &:hover
+        cursor: pointer
+
+// Contact block
+.contact-block
+  background: #303030
+  padding: 50px 0
+  &-container
+    padding: 0 175px
+    display: flex
+    align-items: center
+  &-info
+    flex-basis: calc(100% - 410px)
+    position: relative
+    padding-left: 20px
+    box-sizing: border-box
+    &:before
+      content: ''
+      width: 5px
+      height: 100%
+      position: absolute
+      left: 0
+      top: 0
+      background: $yellow
+    p
+      margin: 0
+      font-size: 16px
+      font-weight: 500
+      color: #ffffff
+    ul
+      padding: 0
+      margin: 0
+      li
+        list-style: none
+        font-size: 16px
+        font-weight: 500
+        a
+          color: #ffffff
+    h3
+      font-size: 16px
+      font-weight: 600
+      line-height: 23px
+      margin: 0
+      color: #ffffff
+    .requisit, .address, .phone, .mail
+      padding-left: 50px
+      position: relative
+      margin-bottom: 35px
+      &:before
+        content: ''
+        width: 30px
+        height: 30px
+        position: absolute
+        left: 0
+        top: -5px
+    .requisit
+      margin-bottom: 0
+      ul
+        li
+          color: #CCCCCC
+          font-weight: 400
+      &:before
+        background: url(../img/file-big.png) no-repeat center center
+    .address
+      &:before
+        background: url(../img/location-big.png) no-repeat center center
+    .phone
+      &:before
+        background: url(../img/phone-big.png) no-repeat center center
+    .mail
+      &:before
+        background: url(../img/mail-big.png) no-repeat center center
+  &-form
+    flex-basis: 410px
+    form
+      width: 100%
+      h3
+        font-size: 25px
+        line-height: 35px
+        margin: 0
+        color: #ffffff
+        font-family: $mFont, $hFont, sans-serif
+      p
+        margin: 5px 0 0
+        font-size: 16px
+        line-height: 23px
+        color: #ffffff
+      span
+        margin-top: 10px
+        width: 100%
+        display: inline-block
+      input
+        width: 100%
+        height: 40px
+        border: none
+        padding: 0 13px
+        font-size: 14px
+        color: $black
+        box-sizing: border-box
+        &::-moz-placeholder
+          color: #443E3E
+          opacity: 1
+        &::-webkit-input-placeholder
+          color: #443E3E
+          opacity: 1
+      textarea
+        width: 100%
+        height: 120px
+        resize: none
+        border: none
+        padding: 13px
+        font-size: 14px
+        color: $black
+        box-sizing: border-box
+        &::-moz-placeholder
+          color: #443E3E
+          opacity: 1
+          font-family: $mFont, $hFont, sans-serif
+        &::-webkit-input-placeholder
+          color: #443E3E
+          opacity: 1
+          font-family: $mFont, $hFont, sans-serif
+      .form-row
+        display: flex
+        justify-content: space-between
+        column-gap: 10px
+        span
+          flex-basis: 50%
+      .agree
+        margin-top: 20px
+        input
+          display: none
+        label
+          font-size: 12px
+          line-height: 17px
+          color: #ffffff
+          padding-left: 28px
+          position: relative
+          display: inline-block
+          &.active
+            &:after
+              display: block
+          &:before
+            content: ''
+            width: 18px
+            height: 18px
+            border-radius: 2px
+            box-sizing: border-box
+            position: absolute
+            left: 0
+            top: 2px
+            background: #ffffff
+          &:after
+            content: ''
+            background: url(../img/checkbox.png) no-repeat center
+            width: 13px
+            height: 8px
+            position: absolute
+            left: 3px
+            top: 8px
+            display: none
+      button
+        width: 100%
+        margin-top: 10px
+        border: none
+        font-size: 16px
+        padding: 16px 0
+        background: $yellow
+        &:hover
+          cursor: pointer
+
+// Main Footer
+.main-footer
+  background: $dark
+  padding: 50px 0 30px
+  &-top
+    .container
+      display: flex
+      column-gap: 135px
+    .logo
+      flex-basis: 150px
+      span
+        font-size: 12px
+        line-height: 14px
+        color: #999999
+        display: block
+        margin-top: 20px
+  &-info
+    flex-basis: calc(100% - 275px)
+    &_contact
+      display: flex
+      column-gap: 25px
+      margin-top: 20px
+      justify-content: flex-end
+      p
+        font-size: 14px
+        line-height: 19px
+        color: #ffffff
+        margin: 0
+      ul
+        margin: 0
+        padding: 0
+        li
+          list-style: none
+          a
+            font-size: 16px
+            color: #ffffff
+            font-weight: 600
+      .request-btn
+        margin-top: 5px
+        color: $yellow
+        text-decoration: underline
+        font-size: 14px
+        line-height: 19px
+        display: block
+        text-align: right
+      &-phone
+        padding-left: 27px
+        position: relative
+        &:before
+          content: ''
+          background: url(../img/phone.png) no-repeat center center
+          width: 21px
+          height: 21px
+          position: absolute
+          left: 0
+          top: 0
+      &-address
+        padding-left: 24px
+        position: relative
+        &:before
+          content: ''
+          background: url(../img/location.png) no-repeat center center
+          width: 17px
+          height: 21px
+          position: absolute
+          left: 0
+          top: 0
+  &-nav
+    border-bottom: 1px solid rgba(255,255,255,0.1)
+    padding-bottom: 20px
+    ul
+      display: flex
+      padding: 0
+      margin: 0
+      li
+        list-style: none
+        font-size: 16px
+        line-height: 23px
+        a
+          color: #ffffff
+        &:not(:last-child)
+          margin-right: 30px
+  &-bottom
+    margin-top: 20px
+    span
+      font-size: 12px
+      color: $grey
+      line-height: 17px
+    a
+      margin-left: 40px
+      font-size: 12px
+      color: $grey
+      line-height: 17px
+
