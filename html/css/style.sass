@@ -302,3 +302,82 @@
     .btn
       margin-top: 20px
       width: 350px
+
+// Info point
+.info-point
+  padding: 100px 0 150px
+  background: $black
+  .heading
+    h2
+      background: $black
+      color: #ffffff
+  &-container
+    display: flex
+    column-gap: 30px
+    margin-top: 30px
+  &-block
+    flex-basis: 25%
+    background: #303030
+    position: relative
+    padding: 3px 5px
+    &:before
+      content: ''
+      width: 75px
+      height: calc(100% - 7px)
+      top: -1px
+      left: 0
+      border: 5px solid $yellow
+      position: absolute
+      z-index: 1
+    &_container
+      background: #303030
+      position: relative
+      z-index: 2
+      padding: 40px 20px
+      height: 100%
+      box-sizing: border-box
+      display: flex
+      justify-content: center
+      flex-direction: column
+      &:after
+        position: absolute
+        height: 36px
+        top: 11px
+        right: 14px
+    &:nth-child(2n + 1)
+      transform: translateY(50px)
+    &:first-child
+      .info-point-block_container
+        &:after
+          content: ''
+          background: url(../img/info-01.png) no-repeat center center
+          width: 47px
+    &:nth-child(2)
+      .info-point-block_container
+         &:after
+           content: ''
+           background: url(../img/info-02.png) no-repeat center center
+           width: 58px
+    &:nth-child(3)
+      .info-point-block_container
+        &:after
+          content: ''
+          background: url(../img/info-03.png) no-repeat center center
+          width: 58px
+    &:nth-child(4)
+      .info-point-block_container
+        &:after
+          content: ''
+          background: url(../img/info-04.png) no-repeat center center
+          width: 64px
+    h3
+      color: #ffffff
+      font-size: 16px
+      line-height: 23px
+      margin: 0
+    p
+      font-size: 14px
+      line-height: 20px
+      color: #CCCCCC
+      margin: 10px 0 0
+      max-width: 230px
