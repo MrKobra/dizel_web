@@ -6,6 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Проект</title>
+    <link rel="stylesheet" href="lib/magnific-popup/magnific-popup.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -23,7 +24,7 @@
                     <ul>
                         <li><a href="tel:+79265657455">+7 (926)565-74-55</a></li>
                     </ul>
-                    <a href="#" class="request-btn">Заказать звонок</a>
+                    <a href="#request-popup" class="request-btn">Заказать звонок</a>
                 </div>
             </div>
         </div>
@@ -32,16 +33,16 @@
     <nav class="top-nav">
         <div class="container">
             <ul>
-                <li class="active"><a href="#">Главная</a></li>
-                <li><a href="#">Каталог</a></li>
-                <li><a href="#">О топливе</a></li>
-                <li><a href="#">Заявка</a></li>
-                <li><a href="#">Контакты</a></li>
+                <li class="active"><a data-start="" data-end="" href="#home">Главная</a></li>
+                <li><a data-start="" data-end="" href="#catalog">Каталог</a></li>
+                <li><a data-start="" data-end="" href="#about">О топливе</a></li>
+                <li><a data-start="" data-end="" href="#info-point">Заявка</a></li>
+                <li><a data-start="" data-end="" href="#contact">Контакты</a></li>
             </ul>
         </div>
     </nav>
 
-    <div class="main-screen">
+    <div id="home" class="main-screen">
         <div class="container">
             <div class="main-screen_container">
                 <div class="main-screen_info">
@@ -50,7 +51,7 @@
                         <span>(от 20 - до 250 квт)</span>
                     </div>
                     <p>Предоставляем высококачественную климатическую технику и оборудование напрокат. Мы быстро доставляем оборудование — не более 1 дня, потому что у нас 6 складов по Москве и Московской области</p>
-                    <a href="#" class="btn">Заказать звонок</a>
+                    <a href="#request-popup" class="request-btn btn">Заказать звонок</a>
                 </div>
                 <div class="main-screen_img">
                     <img src="img/main-screen.png" alt="">
@@ -90,7 +91,7 @@
         </div>
     </div>
 
-    <div class="items">
+    <div id="catalog" class="items">
         <div class="container">
             <div class="heading">
                 <h2>Ассортимент пушек - в аренду</h2>
@@ -280,7 +281,7 @@
         </div>
     </div>
 
-    <div class="about">
+    <div id="about" class="about">
         <div class="container">
             <div class="heading">
                 <h2>О топливе</h2>
@@ -323,7 +324,7 @@
         </div>
     </div>
 
-    <div class="info-point">
+    <div id="info-point" class="info-point">
         <div class="container">
             <div class="heading">
                 <h2>Информация для заявки</h2>
@@ -376,6 +377,14 @@
                 </div>
                 <button class="btn">Заказать звонок</button>
             </form>
+        </div>
+    </div>
+
+    <div id="contact" class="contact">
+        <div class="container">
+            <div class="heading">
+                <h2>Контакты</h2>
+            </div>
         </div>
     </div>
 
@@ -461,10 +470,11 @@
                             <ul>
                                 <li><a href="tel:+79265657455">+7 (926)565-74-55</a></li>
                             </ul>
-                            <a href="#" class="request-btn">Заказать звонок</a>
+                            <a href="#request-popup" class="request-btn">Заказать звонок</a>
                         </div>
                     </div>
                 </div>
+                <div class="up-arrow"></div>
             </div>
         </div>
         <div class="main-footer-bottom">
@@ -475,7 +485,27 @@
         </div>
     </footer>
 
+    <div id="request-popup" class="request-popup">
+        <form action="">
+            <h3>Заказать звонок</h3>
+            <span>
+                <input type="text" placeholder="Имя">
+            </span>
+            <span>
+                <input type="text" placeholder="Телефон">
+            </span>
+            <div class="agree">
+                <label for="agreement-3" class="active">
+                    Я согласен с условиями обработки и использования моих персональных данных
+                </label>
+                <input type="checkbox" checked="checked" id="agreement-3">
+            </div>
+            <button class="btn">Заказать звонок</button>
+        </form>
+    </div>
+
     <script src="lib/jquery/jquery.js"></script>
+    <script src="lib/magnific-popup/jquery.magnific-popup.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
