@@ -81,3 +81,63 @@
         a
           border-color: $yellow
           font-weight: 600
+
+// Main screen
+.main-screen
+  padding: 80px 0 130px
+  background: #EDEDED
+  position: relative
+  &:before
+    content: ''
+    width: 100%
+    height: 45px
+    background: $yellow
+    position: absolute
+    bottom: 147px
+    left: 0
+  &_info
+    width: 630px
+    .heading
+      padding: 35px 0 35px 25px
+      background: #EDEDED
+      position: relative
+      h1, span
+        position: relative
+        z-index: 2
+        background: #EDEDED
+      h1
+        color: $black
+        margin: 0
+        font-size: 48px
+        line-height: 64px
+
+        text-transform: uppercase
+      span
+        font-family: $hFont, $mFont, sans-serif
+        font-size: 26px
+        color: $yellow
+        display: inline-block
+        padding-bottom: 10px
+      &:before
+        content: ''
+        width: 220px
+        height: 100%
+        border: 10px solid $yellow
+        position: absolute
+        top: 0
+        left: 0
+        box-sizing: border-box
+    p
+      font-size: 16px
+      line-height: 23px
+      width: 430px
+      margin: 20px 0 0
+    .btn
+      width: 220px
+      margin: 40px 0 0
+  &_container
+    position: relative
+  &_img
+    position: absolute
+    right: 0
+    top: 0
