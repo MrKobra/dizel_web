@@ -25,9 +25,12 @@ $(document).ready(function(){
         var menuOffset = $('.top-nav').outerHeight();
         $('.top-nav a').each(function(){
             var href = $(this).attr('href');
-            var start = $(href).offset().top - menuOffset;
-            $(this).data('start', start);
-            $(this).data('end', start + $(href).outerHeight());
+            if($($(this).data('start-block')).length != 0 && $($(this).data('end-block')).length != 0) {
+                var start = $($(this).data('start-block')).offset().top - menuOffset;
+                var end = $($(this).data('end-block')).offset().top + $($(this).data('end-block')).outerHeight() - menuOffset;
+                $(this).data('start', start);
+                $(this).data('end', end);
+            }
         })
     }
     setHeight();
@@ -56,21 +59,81 @@ $(document).ready(function(){
         activeItem();
         fixMenu();
     })
+    $(window).resize(function(){
+        setHeight();
+    })
     // Прокрутка до пункта
-    $('.top-nav a').on('click', function(e){
+    $('.top-nav a, .main-footer-nav a').on('click', function(e){
         e.preventDefault();
-        var menuOffset = $('.top-nav').outerHeight() + 2;
-        if($(window).width() > 992) {
-            var href = $(this).attr('href');
-            $('html, body').animate({
-                scrollTop: $(href).offset().top,
-            }, 500)
-        }
+        var menuOffset = $('.top-nav').outerHeight() - 3;
+        var href = $(this).attr('href');
+        $('html, body').animate({
+            scrollTop: $(href).offset().top - menuOffset,
+        }, 500)
     })
     // Попап окно
     $('.request-btn').each(function (){
         $(this).magnificPopup({
             type:'inline',
         });
+    })
+    // Обработка формы
+    $('.contact-form-type_1').submit(function(e){
+        e.preventDefault();
+        var name = $(this).find('input[name=your-name]').val();
+        var phone = $(this).find('input[name=your-phone]').val();
+        var msgText = '';
+        var flag = true;
+        if($(this).find('.agree input').prop('checked')) {
+            if(name.length == 0) {
+                flag = false;
+                msgText = 'Введите имя';
+            } else if(phone.length == 0) {
+                flag = false;
+                msgText = 'Введите телефон';
+            }
+        } else {
+            flag = false;
+            msgText = 'Не приняты условия обработки персональных даанных';
+        }
+        if(flag) {
+
+        } else {
+            if($(this).find('.form-message').length == 0) {
+                $(this).find('button').after('<div class="form-message">'+msgText+'</div>');
+            } else {
+                $(this).find('.form-message').text(msgText);
+            }
+        }
+    })
+    $('.contact-form-type_2').submit(function(e){
+        e.preventDefault();
+        var name = $(this).find('input[name=your-name]').val();
+        var email = $(this).find('input[name=your-email]').val();
+        var phone = $(this).find('input[name=your-phone]').val();
+        var msg = $(this).find('textarea[name=your-msg]').val();
+        var msgText = '';
+        var flag = true;
+        if($(this).find('.agree input').prop('checked')) {
+            if(email.length == 0 || email.indexOf('@') == -1) {
+                flag = false;
+                msgText = 'Введите e-mail';
+            } else if(phone.length == 0) {
+                flag = false;
+                msgText = 'Введите телефон';
+            }
+        } else {
+            flag = false;
+            msgText = 'Не приняты условия обработки персональных даанных';
+        }
+        if(flag) {
+
+        } else {
+            if($(this).find('.form-message').length == 0) {
+                $(this).find('button').after('<div class="form-message">'+msgText+'</div>');
+            } else {
+                $(this).find('.form-message').text(msgText);
+            }
+        }
     })
 })

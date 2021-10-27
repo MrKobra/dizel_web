@@ -27,6 +27,8 @@
           font-size: 16px
           color: #ffffff
           font-weight: 600
+          &:hover
+            color: $yellow
     .request-btn
       margin-top: 5px
       color: $yellow
@@ -35,6 +37,8 @@
       line-height: 19px
       display: block
       text-align: right
+      &:hover
+        color: #ffffff
     &-phone
       padding-left: 27px
       position: relative
@@ -84,6 +88,8 @@
         display: inline-block
         border-bottom: 3px solid transparent
         box-sizing: border-box
+        &:hover
+          color: $yellow
       &.active
         a
           border-color: $yellow
@@ -211,6 +217,8 @@
     &_price
       margin-top: 25px
       width: 100%
+      &:hover
+        color: #ffffff
 
 // About
 .about
@@ -254,8 +262,7 @@
           background: $black
           position: absolute
           left: 0
-          top: 50%
-          margin-top: -5px
+          top: 7px
     p
       margin: 20px 0 0
       font-size: 16px
@@ -420,6 +427,7 @@
       padding: 0 20px
       color: $black
       background: transparent
+      box-sizing: border-box
       &::-moz-placeholder
         color: #443E3E
         opacity: 1
@@ -635,6 +643,7 @@
         background: $yellow
         &:hover
           cursor: pointer
+          color: #ffffff
 
 // Main Footer
 .main-footer
@@ -678,6 +687,8 @@
             font-size: 16px
             color: #ffffff
             font-weight: 600
+            &:hover
+              color: $yellow
       .request-btn
         margin-top: 5px
         color: $yellow
@@ -686,6 +697,8 @@
         line-height: 19px
         display: block
         text-align: right
+        &:hover
+          color: #ffffff
       &-phone
         padding-left: 27px
         position: relative
@@ -721,6 +734,8 @@
         line-height: 23px
         a
           color: #ffffff
+          &:hover
+            color: $yellow
         &:not(:last-child)
           margin-right: 30px
   &-bottom
@@ -740,6 +755,7 @@
   height: 50px
   border: 2px solid $yellow
   background: url(../img/up-arrow.png) no-repeat center center
+  transition: all .2s linear
   &:after
     content: 'вверх'
     font-size: 12px
@@ -751,6 +767,7 @@
     transform: translateX(-50%)
   &:hover
     cursor: pointer
+    background: $yellow url(../img/up-arrow.png) no-repeat center center
 
 // Popup
 .mfp-content
@@ -837,3 +854,57 @@
       padding: 16px 0
       &:hover
         cursor: pointer
+
+.contact-form-type_1
+  .form-message
+    margin-top: 5px
+    font-size: 14px
+    line-height: 20px
+
+.contact-form-type_2
+  .form-message
+    margin-top: 5px
+    font-size: 14px
+    line-height: 20px
+    color: #ffffff
+
+// Contact
+.contact
+  padding: 150px 0 50px
+  &-container
+    margin-top: 50px
+    display: flex
+    column-gap: 30px
+    row-gap: 30px
+    flex-wrap: wrap
+  &-map
+    flex-basis: calc(50% - 15px)
+    position: relative
+    &_container
+      max-width: 100%
+    &_title
+      position: absolute
+      left: 4px
+      bottom: 4px
+      span
+        position: relative
+        z-index: 2
+        display: block
+        width: 305px
+        background: #ffffff
+        padding: 20px
+        font-weight: 700
+        color: $black
+        font-size: 14px
+        line-height: 20px
+      &:before
+        content: ''
+        width: 84px
+        height: calc(100% + 4px)
+        background: $yellow
+        z-index: 1
+        position: absolute
+        left: -4px
+        bottom: -4px
+
+@import 'mobile.sass'

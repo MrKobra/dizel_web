@@ -33,11 +33,11 @@
     <nav class="top-nav">
         <div class="container">
             <ul>
-                <li class="active"><a data-start="" data-end="" href="#home">Главная</a></li>
-                <li><a data-start="" data-end="" href="#catalog">Каталог</a></li>
-                <li><a data-start="" data-end="" href="#about">О топливе</a></li>
-                <li><a data-start="" data-end="" href="#info-point">Заявка</a></li>
-                <li><a data-start="" data-end="" href="#contact">Контакты</a></li>
+                <li class="active"><a data-start-block="#home" data-end-block=".advantages" data-start="" data-end="" href="#home">Главная</a></li>
+                <li><a data-start-block="#catalog" data-end-block="#catalog" data-start="" data-end="" href="#catalog">Каталог</a></li>
+                <li><a data-start-block="#about" data-end-block=".info-block" data-start="" data-end="" href="#about">О топливе</a></li>
+                <li><a data-start-block="#info-point" data-end-block=".contact-form" data-start="" data-end="" href="#info-point">Заявка</a></li>
+                <li><a data-start-block="#contact" data-end-block=".contact-block" data-start="" data-end="" href="#contact">Контакты</a></li>
             </ul>
         </div>
     </nav>
@@ -318,7 +318,7 @@
                     <ul>
                         <li>Цена ДТ зависит — срока аренды и потребляемого объёма топлива. Для каждого — РАССЧИТЫВАЕТСЯ ИНДИВИДУАЛЬНО</li>
                     </ul>
-                    <a href="#" class="btn">Получить предложение по ДТ</a>
+                    <a href="#request-popup" class="request-btn btn">Получить предложение по ДТ</a>
                 </div>
             </div>
         </div>
@@ -360,20 +360,20 @@
 
     <div class="contact-form">
         <div class="container">
-            <form action="">
+            <form name="contact-form" class="contact-form-type_1" action="#">
                 <h3>Оставить заявку</h3>
                 <p>Оставьте заявку на звонок и мы перезвоним в самое ближайшее время</p>
                 <span>
-                    <input type="text" placeholder="Ваше имя">
+                    <input type="text" name="your-name" placeholder="Ваше имя">
                 </span>
                 <span>
-                    <input type="text" placeholder="Ваш телефон">
+                    <input type="text" name="your-phone" placeholder="Ваш телефон">
                 </span>
                 <div class="agree">
                     <label for="agreement" class="active">
                         Я согласен с условиями обработки и использования моих персональных данных
                     </label>
-                    <input type="checkbox" checked="true" id="agreement">
+                    <input type="checkbox" checked="checked" id="agreement">
                 </div>
                 <button class="btn">Заказать звонок</button>
             </form>
@@ -384,6 +384,56 @@
         <div class="container">
             <div class="heading">
                 <h2>Контакты</h2>
+            </div>
+            <div class="contact-container">
+                <div class="contact-map">
+                    <div class="contact-map_container">
+                        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab65e065e157c5e90279264198380a14dc347bb6730d8cc11cc422c3e5c96c694&amp;width=100%25&amp;height=260&amp;lang=ru_RU&amp;scroll=false"></script>
+                        <div class="contact-map_title">
+                            <span> Химки, ул. Московская 38а</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-map">
+                    <div class="contact-map_container">
+                        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab65e065e157c5e90279264198380a14dc347bb6730d8cc11cc422c3e5c96c694&amp;width=100%25&amp;height=260&amp;lang=ru_RU&amp;scroll=false"></script>
+                        <div class="contact-map_title">
+                            <span>Москва, Ореховый бульвар, 26Б</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-map">
+                    <div class="contact-map_container">
+                        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab65e065e157c5e90279264198380a14dc347bb6730d8cc11cc422c3e5c96c694&amp;width=100%25&amp;height=260&amp;lang=ru_RU&amp;scroll=false"></script>
+                        <div class="contact-map_title">
+                            <span>Москва, Зеленый проезд 24</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-map">
+                    <div class="contact-map_container">
+                        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab65e065e157c5e90279264198380a14dc347bb6730d8cc11cc422c3e5c96c694&amp;width=100%25&amp;height=260&amp;lang=ru_RU&amp;scroll=false"></script>
+                        <div class="contact-map_title">
+                            <span>Москва,Советская улица 14</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-map">
+                    <div class="contact-map_container">
+                        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab65e065e157c5e90279264198380a14dc347bb6730d8cc11cc422c3e5c96c694&amp;width=100%25&amp;height=260&amp;lang=ru_RU&amp;scroll=false"></script>
+                        <div class="contact-map_title">
+                            <span>Москва, Профсоюзная улица, 93</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-map">
+                    <div class="contact-map_container">
+                        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab65e065e157c5e90279264198380a14dc347bb6730d8cc11cc422c3e5c96c694&amp;width=100%25&amp;height=260&amp;lang=ru_RU&amp;scroll=false"></script>
+                        <div class="contact-map_title">
+                            <span>Москва, Фестивальная улица, вл. 6Б</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -415,28 +465,28 @@
                     </div>
                 </div>
                 <div class="contact-block-form">
-                    <form action="">
+                    <form class="contact-form-type_2" name="contact-form-2" action="#">
                         <h3>Остались вопросы?</h3>
                         <p>Оставьте заявку на звонок и мы перезвоним в самое ближайшее время</p>
                         <span>
-                        <input type="text" placeholder="Ваше имя">
+                        <input type="text" name="your-name" placeholder="Ваше имя">
                     </span>
                         <div class="form-row">
                         <span>
-                            <input type="text" placeholder="E-mail*">
+                            <input type="text" name="your-email" placeholder="E-mail*">
                         </span>
                             <span>
-                            <input type="text" placeholder="Телефон*">
+                            <input type="text" name="your-phone" placeholder="Телефон*">
                         </span>
                         </div>
                         <span>
-                        <textarea name="" id="" cols="30" rows="10" placeholder="Сообщение"></textarea>
+                        <textarea name="your-msg" id="" cols="30" rows="10" placeholder="Сообщение"></textarea>
                     </span>
                         <div class="agree">
                             <label for="agreement-2" class="active">
                                 Я согласен с условиями обработки и использования моих персональных данных
                             </label>
-                            <input type="checkbox" checked="true" id="agreement-2">
+                            <input type="checkbox" checked="checked" id="agreement-2">
                         </div>
                         <button class="btn">Задать вопрос</button>
                     </form>
@@ -455,11 +505,11 @@
                 <div class="main-footer-info">
                     <nav class="main-footer-nav">
                         <ul>
-                            <li><a href="#">Главная</a></li>
-                            <li><a href="#">Каталог</a></li>
-                            <li><a href="#">О топливе</a></li>
-                            <li><a href="#">Заявка</a></li>
-                            <li><a href="#">Контакты</a></li>
+                            <li><a href="#home">Главная</a></li>
+                            <li><a href="#catalog">Каталог</a></li>
+                            <li><a href="#about">О топливе</a></li>
+                            <li><a href="#info-point">Заявка</a></li>
+                            <li><a href="#contact">Контакты</a></li>
                         </ul>
                     </nav>
                     <div class="main-footer-info_contact">
@@ -486,13 +536,13 @@
     </footer>
 
     <div id="request-popup" class="request-popup">
-        <form action="">
+        <form name="contact-form-3" class="contact-form-type_1" action="#">
             <h3>Заказать звонок</h3>
             <span>
-                <input type="text" placeholder="Имя">
+                <input type="text" name="your-name" placeholder="Имя">
             </span>
             <span>
-                <input type="text" placeholder="Телефон">
+                <input type="text" name="your-phone" placeholder="Телефон">
             </span>
             <div class="agree">
                 <label for="agreement-3" class="active">
