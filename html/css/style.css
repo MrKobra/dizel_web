@@ -334,10 +334,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 .items-card_price {
   margin-top: 25px;
-  width: 100%;
 }
-.items-card_price:hover {
-  color: #ffffff;
+.items-card_price a {
+  width: 100%;
 }
 
 .about {
