@@ -73,15 +73,27 @@ $(document).ready(function(){
     })
     // Попап окно
     $('.request-btn').each(function (){
-        $(this).magnificPopup({
+        var btn = $(this);
+        btn.magnificPopup({
             type:'inline',
+            callbacks: {
+                open: function() {
+                    $('#request-popup input[name=item-title]').val();
+                    $('#request-popup input[name=item-title]').val(btn.data('title'));
+                }
+            }
         });
     })
     // Обработка формы
     $('.contact-form-type_1').submit(function(e){
         e.preventDefault();
+        var form = $(this);
         var name = $(this).find('input[name=your-name]').val();
         var phone = $(this).find('input[name=your-phone]').val();
+        var item = '';
+        if(form.find('input[name=item-title]').length != 0) {
+            item = form.find('input[name=item-title]').val();
+        }
         var msgText = '';
         var flag = true;
         if($(this).find('.agree input').prop('checked')) {
@@ -97,17 +109,47 @@ $(document).ready(function(){
             msgText = 'Не приняты условия обработки персональных даанных';
         }
         if(flag) {
-
+            $.ajax({
+                type: 'POST',
+                url: 'scripts/send.php',
+                data: {
+                    name: name,
+                    phone: phone,
+                    item: item
+                },
+                success: function (data) {
+                    if (data) {
+                        form[0].reset();
+                        msgText = 'Сообщение успешно отправлено';
+                    } else {
+                        msgText = 'Возникла ошибка';
+                    }
+                    if (form.find('.form-message').length == 0) {
+                        form.find('button').after('<div class="form-message">' + msgText + '</div>');
+                    } else {
+                        form.find('.form-message').text(msgText);
+                    }
+                },
+                error: function() {
+                    msgText = 'Возникла ошибка';
+                    if (form.find('.form-message').length == 0) {
+                        form.find('button').after('<div class="form-message">' + msgText + '</div>');
+                    } else {
+                        form.find('.form-message').text(msgText);
+                    }
+                }
+            })
         } else {
-            if($(this).find('.form-message').length == 0) {
-                $(this).find('button').after('<div class="form-message">'+msgText+'</div>');
+            if(form.find('.form-message').length == 0) {
+                form.find('button').after('<div class="form-message">'+msgText+'</div>');
             } else {
-                $(this).find('.form-message').text(msgText);
+                form.find('.form-message').text(msgText);
             }
         }
     })
     $('.contact-form-type_2').submit(function(e){
         e.preventDefault();
+        var form = $(this);
         var name = $(this).find('input[name=your-name]').val();
         var email = $(this).find('input[name=your-email]').val();
         var phone = $(this).find('input[name=your-phone]').val();
@@ -127,12 +169,42 @@ $(document).ready(function(){
             msgText = 'Не приняты условия обработки персональных даанных';
         }
         if(flag) {
-
+            $.ajax({
+                type: 'POST',
+                url: 'scripts/send.php',
+                data: {
+                    name: name,
+                    email: email,
+                    phone: phone,
+                    msg: msg
+                },
+                success: function (data) {
+                    if (data) {
+                        form[0].reset();
+                        msgText = 'Сообщение успешно отправлено';
+                    } else {
+                        msgText = 'Возникла ошибка';
+                    }
+                    if (form.find('.form-message').length == 0) {
+                        form.find('button').after('<div class="form-message">' + msgText + '</div>');
+                    } else {
+                        form.find('.form-message').text(msgText);
+                    }
+                },
+                error: function() {
+                    msgText = 'Возникла ошибка';
+                    if (form.find('.form-message').length == 0) {
+                        form.find('button').after('<div class="form-message">' + msgText + '</div>');
+                    } else {
+                        form.find('.form-message').text(msgText);
+                    }
+                }
+            })
         } else {
-            if($(this).find('.form-message').length == 0) {
-                $(this).find('button').after('<div class="form-message">'+msgText+'</div>');
+            if(form.find('.form-message').length == 0) {
+                form.find('button').after('<div class="form-message">'+msgText+'</div>');
             } else {
-                $(this).find('.form-message').text(msgText);
+                form.find('.form-message').text(msgText);
             }
         }
     })
